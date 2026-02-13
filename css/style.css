@@ -51,13 +51,22 @@ body::before {
 }
 
 .character-container {
-    margin: 10px 0;
+    margin: 10px auto;
+    width: 200px; /* 根據兩隻企鵝的比例調整寬度 */
+    height: auto;
+    background-color: white;
+    padding: 5px;
+    border-radius: 15px; /* 圓角矩形風格 */
+    border: 3px solid var(--gold);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    overflow: hidden;
 }
 
 .penguin-img {
-    width: 80px;
+    width: 100%;
     height: auto;
-    filter: drop-shadow(0 4px 4px rgba(0,0,0,0.2));
+    display: block;
+    mix-blend-mode: multiply; /* 確保白色背景與容器融合 */
 }
 
 header h1 {
