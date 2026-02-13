@@ -93,10 +93,15 @@ header h1 {
 }
 
 #prize-text {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
     color: var(--primary-red);
     line-height: 1.4;
+    text-shadow: 2px 2px 4px rgba(255,255,255,0.9);
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 8px 15px;
+    border-radius: 12px;
 }
 
 #scratch-canvas {
@@ -105,8 +110,8 @@ header h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 2;
-    touch-action: none; /* 防止手機滑動時捲動頁面 */
+    z-index: 3;
+    touch-action: none; 
     cursor: crosshair;
 }
 
@@ -115,6 +120,8 @@ header h1 {
     flex-direction: column;
     gap: 10px;
     margin-top: 20px;
+    position: relative;
+    z-index: 5;
 }
 
 .main-button {
@@ -166,7 +173,10 @@ header h1 {
     align-items: center;
     padding: 20px;
     z-index: 1;
-    background: #fff;
-    /* 使用 CSS 繪製簡單的喜慶邊框或裝飾 */
-    border: 10px double #ffe082;
+    background-color: #fff;
+    background-image: url('../assets/images/backgroud.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 6px double #ffe082;
 }
