@@ -16,9 +16,8 @@
 
 body {
     font-family: "Microsoft JhengHei", Arial, sans-serif;
-    background-image: url('../assets/images/backgroud.jpg');
-    background-size: cover;
-    background-position: center;
+    /* 更換為喜氣紅漸層背景，省去大圖載入時間 */
+    background: radial-gradient(circle at center, #ff4d4d 0%, #b30000 100%);
     background-attachment: fixed;
     color: var(--text-color);
     display: flex;
@@ -26,16 +25,28 @@ body {
     align-items: center;
     min-height: 100vh;
     overflow-x: hidden;
+    position: relative;
+}
+
+/* 加入一點過年裝飾感 (祥雲浮水印效果) */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M10 50 Q 25 40 40 50 T 70 50" fill="none" stroke="rgba(255,215,0,0.1)" stroke-width="2"/></svg>');
+    opacity: 0.3;
+    pointer-events: none;
 }
 
 #app {
-    width: 100%;
-    max-width: 500px;
+    width: 90%;
+    max-width: 450px;
     text-align: center;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.85); /* 半透明白色背景讓內容更清晰 */
-    border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.92);
+    border: 3px solid var(--gold);
+    border-radius: 25px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
     margin: 20px;
 }
 
@@ -155,7 +166,7 @@ header h1 {
     align-items: center;
     padding: 20px;
     z-index: 1;
-    background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('../assets/images/test.jpg');
-    background-size: cover;
-    background-position: center;
+    background: #fff;
+    /* 使用 CSS 繪製簡單的喜慶邊框或裝飾 */
+    border: 10px double #ffe082;
 }
